@@ -1,0 +1,4 @@
+div.app h1 {
+  font-size: 1rem;
+  color: var(--grey);
+}
