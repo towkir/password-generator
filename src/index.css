@@ -30,8 +30,12 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  min-width: 540px;
   min-height: 100vh;
   color: var(--almost-white);
   background-color: var(--very-dark-grey);
+}
+
+div#root {
+  width: 100%;
+  max-width: 540px;
 }
