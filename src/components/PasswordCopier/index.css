@@ -1,0 +1,23 @@
+.password-copier {
+  background-color: var(--dark-grey);
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-copier input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.77rem;
+  padding: 0;
+  color: inherit;
+}
+
+.password-copier button[type="button"] {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
