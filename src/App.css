@@ -1,5 +1,7 @@
 div.app h1 {
-  font-size: 1rem;
+  font-size: 1.33rem;
   color: var(--grey);
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
