@@ -1,0 +1,72 @@
+.password-generator {
+  background-color: var(--dark-grey);
+  padding: 20px 32px;
+}
+
+.password-generator .character-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.password-generator .character-length .value {
+  font-size: 1.77rem;
+  color: var(--neon-green);
+}
+
+.password-generator .character-length-input input[type="range"] {
+  --color: var(--neon-green);
+  --gap: 5px;
+  --thickness: 5px;
+  --size: 30px;
+  --color-mix: color-mix(in srgb, var(--color), #000 var(--percent, 0%));
+  width: 100%;
+  height: var(--size);
+  -webkit-appearance :none;
+  -moz-appearance :none;
+  appearance :none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+input:focus-visible,
+input:hover{
+  --percent: 25%;
+}
+input:active,
+input:focus-visible{
+  --blur: var(--size)
+}
+
+/* chromium */
+input[type="range"]::-webkit-slider-thumb{
+  height: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--blur, var(--thickness)) inset var(--color-mix);
+  border-image: linear-gradient(90deg, var(--color-mix) 50%, var(--very-dark-grey) 0) 0 1/calc(50% - var(--thickness)/2) 100vw/0 calc(100vw + var(--gap));
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--size);
+  width: var(--size);
+  background: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--blur,var(--thickness)) inset var(--color-mix);
+  border-image: linear-gradient(90deg, var(--color-mix) 50%, var(--very-dark-grey) 0) 0 1/calc(50% - var(--thickness)/2) 100vw/0 calc(100vw + var(--gap));
+  -moz-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+
+@supports not (color: color-mix(in srgb,red,red)) {
+  input {
+    --color-mix: var(--color);
+  }
+}

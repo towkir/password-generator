@@ -1,12 +1,14 @@
 import PasswordCopier from 'components/PasswordCopier'
+import PasswordGenerator from 'components/PasswordGenerator'
 
 import './App.css'
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <h1>Password Generator</h1>
-      <PasswordCopier password={'hello'}/>
+      <PasswordCopier password={'hello'} />
+      <PasswordGenerator />
     </div>
   )
 }
