@@ -23,6 +23,7 @@
   --color-mix: color-mix(in srgb, var(--color), #000 var(--percent, 0%));
   width: 100%;
   height: var(--size);
+  margin: 0 0 30px;
   -webkit-appearance :none;
   -moz-appearance :none;
   appearance :none;
@@ -31,17 +32,17 @@
   overflow: hidden;
 }
 
-input:focus-visible,
-input:hover{
+.password-generator .character-length-input input:focus-visible,
+.password-generator .character-length-input input:hover{
   --percent: 25%;
 }
-input:active,
-input:focus-visible{
+.password-generator .character-length-input input:active,
+.password-generator .character-length-input input:focus-visible{
   --blur: var(--size)
 }
 
 /* chromium */
-input[type="range"]::-webkit-slider-thumb{
+.password-generator .character-length-input input[type="range"]::-webkit-slider-thumb{
   height: var(--size);
   aspect-ratio: 1;
   border-radius: 50%;
@@ -53,7 +54,7 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 /* Firefox */
-input[type="range"]::-moz-range-thumb {
+.password-generator .character-length-input input[type="range"]::-moz-range-thumb {
   height: var(--size);
   width: var(--size);
   background: none;
@@ -66,7 +67,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @supports not (color: color-mix(in srgb,red,red)) {
-  input {
+  .password-generator .character-length-input input {
     --color-mix: var(--color);
   }
 }
