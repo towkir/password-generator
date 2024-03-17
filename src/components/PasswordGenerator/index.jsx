@@ -49,6 +49,9 @@ function PasswordGenerator() {
           </label>
         )}
       </div>
+      <button type="button" className="big-button">
+        Generate <img src="src/assets/icons/icon-arrow-right.svg" className="icon" />
+      </button>
     </div>
   )
 }

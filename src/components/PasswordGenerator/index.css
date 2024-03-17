@@ -1,6 +1,6 @@
 .password-generator {
   background-color: var(--dark-grey);
-  padding: 20px 32px;
+  padding: 32px;
 }
 
 .password-generator .character-length {
@@ -110,3 +110,22 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.big-button {
+  background-color: var(--neon-green);
+  border: 0;
+  width: 100%;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: inherit;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.big-button img.icon {
+  margin-left: 15px;
+}
+
