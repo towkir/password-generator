@@ -1,0 +1,64 @@
+.strength-indicator {
+  padding: 20px 32px;
+  background-color: var(--very-dark-grey);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.strength-indicator .label {
+  color: var(--grey)
+}
+
+.strength-indicator .strength {
+  display: flex;
+  align-items: center;
+}
+
+.strength-indicator .strength .value {
+  color: var(--almost-white);
+  font-size: 1.33rem;
+  margin-right: 16px;
+}
+
+.strength-indicator .strength .indicator {
+  display: inline-block;
+  height: 28px;
+}
+
+.strength-indicator .strength .indicator span {
+  display: inline-block;
+  width: 10px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 2px solid var(--almost-white);
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.strength-indicator .strength .indicator span:not(:last-child) {
+  margin-right: 8px;
+}
+
+.strength-indicator .strength .indicator span.filled {
+  border-color: transparent;
+}
+
+.strength-indicator .strength .indicator.meh span.filled {
+  background-color: var(--red);
+}
+
+.strength-indicator .strength .indicator.weak span.filled {
+  background-color: var(--orange);
+}
+
+.strength-indicator .strength .indicator.medium span.filled {
+  background-color: var(--yellow);
+}
+
+.strength-indicator .strength .indicator.strong span.filled {
+  background-color: var(--neon-green);
+}

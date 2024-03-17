@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StrengthIndicator from "components/StrengthIndicator"
 import './index.css'
 
 function PasswordGenerator() {
@@ -49,6 +50,7 @@ function PasswordGenerator() {
           </label>
         )}
       </div>
+      <StrengthIndicator />
       <button type="button" className="big-button">
         Generate <img src="src/assets/icons/icon-arrow-right.svg" className="icon" />
       </button>
