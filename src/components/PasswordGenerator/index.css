@@ -71,3 +71,42 @@
     --color-mix: var(--color);
   }
 }
+
+.character-inclusion-control-wrapper {
+  margin-bottom: 32px;
+}
+
+.character-inclusion-control-wrapper label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.character-inclusion-control-wrapper label:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.character-inclusion-control-wrapper label input[type="checkbox"] {
+  display: none;
+}
+
+.character-inclusion-control-wrapper label span.check-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid var(--almost-white);
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.character-inclusion-control-wrapper label input[type="checkbox"]:checked + span.check-icon {
+  border-color: transparent;
+  background-color: var(--neon-green);
+  background-image: url("src/assets/icons/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
