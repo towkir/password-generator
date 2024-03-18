@@ -7,15 +7,15 @@ function PasswordGenerator({ handlePassword }) {
   const [config, setConfig] = useState({
     uppercase: {
       label: "Uppercase Letters",
-      value: false,
+      value: true,
     },
     lowercase: {
       label: "Lowercase Letters",
-      value: false,
+      value: true,
     },
     numbers: {
       label: "Numbers",
-      value: false,
+      value: true,
     },
     symbols: {
       label: "Symbols",
@@ -89,7 +89,8 @@ function PasswordGenerator({ handlePassword }) {
       <div className="character-inclusion-control-wrapper">
         {Object.keys(config).map(item =>
           <label className="checkbox" tabIndex="0" key={config[item].label}>
-            <input type="checkbox" value={config[item].value} onChange={(e) => handleCheckbox(item, e.target.checked)}/>
+            <input type="checkbox" checked={config[item].value} value={config[item].value}
+              onChange={(e) => handleCheckbox(item, e.target.checked)} />
             <span className="check-icon"></span>
             <span className="text-label">Include {config[item].label}</span>
           </label>
