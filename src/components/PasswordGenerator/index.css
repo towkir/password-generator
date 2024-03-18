@@ -113,6 +113,7 @@
 
 .big-button {
   background-color: var(--neon-green);
+  color: var(--dark-grey);
   border: 0;
   width: 100%;
   font-family: inherit;
@@ -123,6 +124,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.big-button:disabled {
+  opacity: 0.5;
 }
 
 .big-button img.icon {

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import StrengthIndicator from "components/StrengthIndicator"
 import './index.css'
 
@@ -30,6 +30,11 @@ function PasswordGenerator({ handlePassword }) {
       return newConfig
     })
   }
+
+  const [shouldGenerate] = useMemo(() => {
+    return [Object.keys(config).filter(key => config[key].value === true)
+      .length > 0 && characterLength > 0]
+  }, [config, characterLength])
 
   const generatePassword = function () {
     let thePassword = ""
@@ -97,7 +102,8 @@ function PasswordGenerator({ handlePassword }) {
         )}
       </div>
       <StrengthIndicator />
-      <button type="button" className="big-button" onClick={generatePassword}>
+      <button type="button" className="big-button"
+        onClick={generatePassword} disabled={!shouldGenerate}>
         Generate <img src="src/assets/icons/icon-arrow-right.svg" className="icon" />
       </button>
     </div>
