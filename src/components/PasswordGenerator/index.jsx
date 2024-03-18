@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import StrengthIndicator from "components/StrengthIndicator"
 import './index.css'
 
@@ -80,6 +80,10 @@ function PasswordGenerator({ handlePassword }) {
     }).join('');
     handlePassword(thePassword)
   }
+
+  useEffect(() => {
+    handlePassword('')
+  }, [config, characterLength])
 
   return (
     <div className="password-generator">
