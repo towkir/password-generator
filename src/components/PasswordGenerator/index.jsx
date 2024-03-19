@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import StrengthIndicator from "components/StrengthIndicator"
+import StrengthIndicator from 'components/StrengthIndicator'
 import './index.css'
 
 function PasswordGenerator({ handlePassword }) {
@@ -7,19 +7,19 @@ function PasswordGenerator({ handlePassword }) {
   const [characterLength, setCharacterLength] = useState(10)
   const [config, setConfig] = useState({
     uppercase: {
-      label: "Uppercase Letters",
+      label: 'Uppercase Letters',
       value: true,
     },
     lowercase: {
-      label: "Lowercase Letters",
+      label: 'Lowercase Letters',
       value: true,
     },
     numbers: {
-      label: "Numbers",
+      label: 'Numbers',
       value: true,
     },
     symbols: {
-      label: "Symbols",
+      label: 'Symbols',
       value: false,
     }
   })
@@ -33,11 +33,11 @@ function PasswordGenerator({ handlePassword }) {
   }
 
   const generatePassword = function () {
-    let thePassword = ""
-    const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let thePassword = ''
+    const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const lowerLetters = upperLetters.toLowerCase()
-    const numbers = "0123456789"
-    const symbols = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
+    const numbers = '0123456789'
+    const symbols = '!@#$%^&*()_+~`|}{[]\:;?><,./-='
     while (thePassword.length < characterLength) {
       if (config.uppercase.value) {
         const upperLetterIndex = Math.ceil(upperLetters.length * Math.random() * Math.random())
