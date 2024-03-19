@@ -20,6 +20,7 @@
 .strength-indicator .strength .value {
   color: var(--almost-white);
   font-size: 1.33rem;
+  line-height: 1;
   margin-right: 16px;
 }
 
