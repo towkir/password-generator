@@ -111,7 +111,7 @@ function PasswordGenerator({ handlePassword }) {
           </label>
         )}
       </div>
-      <StrengthIndicator />
+      <StrengthIndicator password={password} />
       <button type="button" className="big-button"
         onClick={generatePassword} disabled={!shouldGenerate}>
         Generate <img src="src/assets/icons/icon-arrow-right.svg" className="icon" />
