@@ -3,6 +3,7 @@ import StrengthIndicator from "components/StrengthIndicator"
 import './index.css'
 
 function PasswordGenerator({ handlePassword }) {
+  const [password, setPassword] = useState('')
   const [characterLength, setCharacterLength] = useState(10)
   const [config, setConfig] = useState({
     uppercase: {
@@ -30,11 +31,6 @@ function PasswordGenerator({ handlePassword }) {
       return newConfig
     })
   }
-
-  const [shouldGenerate] = useMemo(() => {
-    return [Object.keys(config).filter(key => config[key].value === true)
-      .length > 0 && characterLength > 0]
-  }, [config, characterLength])
 
   const generatePassword = function () {
     let thePassword = ""
@@ -78,11 +74,21 @@ function PasswordGenerator({ handlePassword }) {
     thePassword = thePassword.split('').sort(function () {
       return 0.5 - Math.random()
     }).join('');
-    handlePassword(thePassword)
+    setAndEmitPassword(thePassword)
   }
 
+  const setAndEmitPassword = function (newPassword) {
+    setPassword(newPassword)
+    handlePassword(newPassword)
+  }
+
+  const [shouldGenerate] = useMemo(() => {
+    const applied = Object.keys(config).filter(key => config[key].value === true)
+    return [applied.length > 0 && characterLength > 0]
+  }, [config, characterLength])
+
   useEffect(() => {
-    handlePassword('')
+    setAndEmitPassword('')
   }, [config, characterLength])
 
   return (
