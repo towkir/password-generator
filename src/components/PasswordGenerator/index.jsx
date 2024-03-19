@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import StrengthIndicator from 'components/StrengthIndicator'
+import rightArrowIcon from 'src/assets/icons/icon-arrow-right.svg'
 import './index.css'
 
 function PasswordGenerator({ handlePassword }) {
@@ -114,7 +115,7 @@ function PasswordGenerator({ handlePassword }) {
       <StrengthIndicator password={password} />
       <button type="button" className="big-button"
         onClick={generatePassword} disabled={!shouldGenerate}>
-        Generate <img src="src/assets/icons/icon-arrow-right.svg" className="icon" />
+        Generate <img src={rightArrowIcon} className="icon" />
       </button>
     </div>
   )
