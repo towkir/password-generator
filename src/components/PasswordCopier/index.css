@@ -10,6 +10,7 @@
 .password-copier input[type="text"] {
   background-color: transparent;
   border: 0;
+  width: calc(100% - 22px);
   font-family: inherit;
   font-size: var(--large);
   padding: 0;
