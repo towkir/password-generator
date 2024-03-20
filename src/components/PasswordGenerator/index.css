@@ -11,7 +11,7 @@
 }
 
 .password-generator .character-length .value {
-  font-size: 1.77rem;
+  font-size: var(--large);
   color: var(--neon-green);
 }
 

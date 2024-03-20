@@ -11,7 +11,7 @@
   background-color: transparent;
   border: 0;
   font-family: inherit;
-  font-size: 1.77rem;
+  font-size: var(--large);
   padding: 0;
   color: inherit;
 }

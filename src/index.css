@@ -15,14 +15,8 @@
   --red: #F64A4A;
   --orange: #FB7C58;
   --yellow: #F8CD65;
-}
-
-.heading-l {
-  font-size: 1.77rem;
-}
-
-.heading-m {
-  font-size: 1.33rem;
+  --large: 1.77rem;
+  --medium: 1.33rem;
 }
 
 body {
