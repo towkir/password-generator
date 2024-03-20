@@ -36,4 +36,13 @@ body {
 div#root {
   width: 100%;
   max-width: 540px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+    --large: 1.6rem;
+    --medium: 1.2rem;
+  }
 }

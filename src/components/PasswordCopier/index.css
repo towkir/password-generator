@@ -23,3 +23,10 @@
   padding: 0;
   cursor: pointer;
 }
+
+@media screen and (max-width: 570px) {
+  .password-copier {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}

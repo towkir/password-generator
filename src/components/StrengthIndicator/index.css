@@ -63,3 +63,10 @@
 .strength-indicator .strength .indicator.strong span.filled {
   background-color: var(--neon-green);
 }
+
+@media screen and (max-width: 570px) {
+  .strength-indicator {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+}

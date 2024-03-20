@@ -5,3 +5,9 @@ div.app h1 {
   margin-top: 0;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 570px) {
+  div.app h1 {
+    margin-bottom: 20px;
+  }
+}

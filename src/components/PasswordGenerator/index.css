@@ -135,3 +135,16 @@
   margin-left: 15px;
 }
 
+@media screen and (max-width: 570px) {
+  .password-generator {
+    padding: 20px;
+  }
+
+  .character-inclusion-control-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .character-inclusion-control-wrapper label span.check-icon {
+    margin-right: 15px;
+  }
+}
