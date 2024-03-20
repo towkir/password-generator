@@ -17,11 +17,34 @@
   color: inherit;
 }
 
-.password-copier button[type="button"] {
+.password-copier .copy-btn {
   background-color: transparent;
   border: 0;
   padding: 0;
   cursor: pointer;
+  position: relative;
+}
+
+.password-copier .copy-btn:disabled {
+  opacity: 0.7;
+}
+
+.password-copier .copy-btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 27px;
+  background-image: url("src/assets/icons/icon-copy.svg");
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+}
+
+.password-copier .copy-btn.copied::before {
+  transform: scale(2);
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 570px) {
