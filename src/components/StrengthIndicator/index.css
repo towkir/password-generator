@@ -69,4 +69,12 @@
     padding: 16px;
     margin-bottom: 20px;
   }
+
+  .strength-indicator .strength .value {
+    margin-right: 10px;
+  }
+
+  .strength-indicator .strength .indicator span:not(:last-child) {
+    margin-right: 5px;
+  }
 }
