@@ -19,12 +19,16 @@
   --medium: 1.33rem;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100%;
   color: var(--almost-white);
   background-color: var(--very-dark-grey);
 }
