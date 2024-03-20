@@ -44,4 +44,4 @@ npm run build
 
 ---
 
-> N.B. If you serve this project locally over `http`, the copy password feature might not work, because the clipboard api is sensitive to security. But it works expected once it's hosted through https.
+> N.B. If you serve this project locally over `http`, the copy password feature might not work, because the clipboard api is sensitive to security. But it works expected once it's hosted through `https`.
