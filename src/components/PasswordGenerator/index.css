@@ -147,4 +147,8 @@
   .character-inclusion-control-wrapper label span.check-icon {
     margin-right: 15px;
   }
+
+  .big-button {
+    padding: 16px;
+  }
 }
